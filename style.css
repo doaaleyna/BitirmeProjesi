@@ -32,7 +32,7 @@
   color: #ff7200;
   font-size: 35px;
   font-family: Arial;
-  padding-left: 20px;
+  padding-left: 5px;
   float: left;
   padding-top: 10px;
 }
@@ -72,15 +72,16 @@ ul li a:hover {
 }
 
 .search {
-  width: 410px;
+  width: 350px;
   float: right;
-  margin-left: 270px;
+  margin-left: 170px;
+  margin-top: -45px;
 }
 
 .srch {
   font-family: "Times New Roman";
   width: 200px;
-  height: 40px;
+  height: 34px;
   background: transparent;
   border: 1px solid #ff7200;
   margin-top: 13px;
@@ -89,20 +90,20 @@ ul li a:hover {
   font-size: 16px;
   float: left;
   padding: 10px;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .btn {
   width: 100px;
-  height: 40px;
+  height: 34px;
   background: #ff7200;
   border: 2px solid #ff7200;
   margin-top: 13px;
   color: #fff;
   font-size: 15px;
-  border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .btn:focus {
@@ -175,7 +176,7 @@ ul li a:hover {
 
 .form {
   width: 250px;
-  height: 380px;
+  height: 310px;
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.8) 50%,
