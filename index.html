@@ -33,6 +33,9 @@
             <p>Kampüs bir tık uzağında...</p>
 
             <button class="cn"><a href="#">Bize Ulaşın</a></button>
+        </div>
+            
+            <!-- 
             <div class="form">
                 <h2>Kayıt Olun</h2>
                 <input type="email" name="email" placeholder="Email">
@@ -42,9 +45,58 @@
                 <p class="link">Hesabınız Yok Mu?<br>
                     <a href="#">Kayıt Ol</a>
                 </p>
-                <!--  <p class="liw">Log in with</p> -->
             </div>
-        </div>
+            -->
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="bton"></div>
+                    <button type="button" onclick="login()" class="toggle-bton">Giriş Yap</button>
+                    <button type="button" onclick="register()" class="toggle-bton">Kayıt Ol</button>
+                </div>
+                <form id="login" class="input-group-login">
+                    <input type="text" class="input-field" placeholder="E-mail" required>
+                    <input type="password" class="input-field" placeholder="Şifre" required>
+                    <input type="checkbox" class="check-box"><span>Şifremi Hatırla</span>
+                    <a href="#" id="forgot" class="forgot">Şifremi Unuttum</a>
+                    <button type="submit" class="submit-bton">Giriş Yap</button>
+                </form>
+                <form id="register" class="input-group-register">
+                    <input type="text" class="input-field" placeholder="İsim Soyisim" required>
+                    <input type="email" class="input-field" placeholder="E-mail" required>
+                    <input type="telefon" class="input-field" placeholder="Telefon" required>
+                    <input type="password" class="input-field" placeholder="Şifre" required>
+                    <button type="submit" class="submit-bton">Kayıt Ol</button>
+                </form>
+            </div>
+
+        <script>
+            var x=document.getElementById('login');
+            var y=document.getElementById('register');
+            var z=document.getElementById('bton');
+            function register()
+            {
+                x.style.left='-400px';
+                y.style.left='50px';
+                z.style.left='110px';
+            }
+            function login()
+            {
+                x.style.left='50px';
+                y.style.left='450px';
+                z.style.left='0px';
+            }
+        </script>
+        <script>
+            var modal = document.getElementById('login-form');
+            window.onclick = function(event) 
+            {
+                if (event.target == modal) 
+                {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        
     </div>
 
 
