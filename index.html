@@ -3,52 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoCampus.com</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">goCampus</h2>
-            </div>
-        </div>
-        <div class="class-menu">
-            <ul>
-                <li><a href="about.html">HAKKINDA</a></li>
-                <li><a href="#">NASIL ÇALIŞIR</a></li>
-                <li><a href="#">BİZE ULAŞIN</a></li>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">goCampus</a></div>
+            <ul class="menu">
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">Nasıl Çalışır</a></li>
+                <li><a href="#">Bize Ulaşın</a></li>
             </ul>
-        </div>
-
-        <div class="search">
-            <input class="srch" type="search" name="" placeholder="Ara">
-            <a href="#"> <button class="btn"> Ara</button> </a>
-        </div>
-        <div class="content">
-            <h1>Yeni Nesil <br><span>Eğitim</span> <br>Platformu</h1>
-            <p>Kampüs bir tık uzağında...</p>
-
-            <button class="cn"><a href="#">Bize Ulaşın</a></button>
-
-            <div class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos asperiores quia ratione consequatur aliquid ea cum, veritatis ipsum corporis a expedita voluptates minus quibusdam sed. Obcaecati optio nisi deleniti.</div>
-            <div class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos asperiores quia ratione consequatur aliquid ea cum, veritatis ipsum corporis a expedita voluptates minus quibusdam sed. Obcaecati optio nisi deleniti.</div>
-                    
-        </div>
-            
-            <!-- 
-            <div class="form">
-                <h2>Kayıt Olun</h2>
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="" placeholder="Şifre">
-                <button class="btnn"><a href="#">Giriş</a></button>
-
-                <p class="link">Hesabınız Yok Mu?<br>
-                    <a href="#">Kayıt Ol</a>
-                </p>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Ara">
+                <a href="#"> <button class="btn"> Ara</button> </a>
             </div>
-            -->
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+    
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <h1>Yeni Nesil <br><span>Eğitim</span> <br>Platformu</h1>
+                <p>Kampüs bir tık uzağında...</p>
+                <button class="cn"><a href="#">Bize Ulaşın</a></button>
+                <div class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos asperiores quia ratione consequatur aliquid ea cum, veritatis ipsum corporis a expedita voluptates minus quibusdam sed. Obcaecati optio nisi deleniti.</div>
+                <div class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos asperiores quia ratione consequatur aliquid ea cum, veritatis ipsum corporis a expedita voluptates minus quibusdam sed. Obcaecati optio nisi deleniti.</div>           
+            </div>
+
             <div class="form-box">
                 <div class="button-box">
                     <div id="bton"></div>
@@ -70,7 +60,7 @@
                     <button type="submit" class="submit-bton">Kayıt Ol</button>
                 </form>
             </div>
-
+    
         <script>
             var x=document.getElementById('login');
             var y=document.getElementById('register');
@@ -88,24 +78,8 @@
                 z.style.left='0px';
             }
         </script>
-
-        <script src="script.js"></script>
-
-        <!--
-        <script>
-            var modal = document.getElementById('login-form');
-            window.onclick = function(event) 
-            {
-                if (event.target == modal) 
-                {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
-        -->
-    </div>
-
-
+        </div>
+    </section>   
+</div>
 </body>
-
 </html>

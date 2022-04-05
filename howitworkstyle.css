@@ -33,7 +33,7 @@
 }
 
 .navbar .logo a{
-    color: black;
+    color: #fff;
     font-size: 35px;
     font-weight: 600;
 }
@@ -61,8 +61,64 @@ display: inline-block;
 }
 
 .navbar .menu li a:hover{
+    color: #ff7200;
+}
+
+.navbar.sticky .menu li a:hover{
     color: #fff;
 }
+
+.navbar .search {
+    width: 350px;
+    float: right;
+  }
+  
+  .navbar .srch {
+    font-family: 'Ubuntu', sans-serif;
+    width: 200px;
+    height: 34px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: rgba(0, 0, 0, 0.5);
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  
+  .navbar.sticky .srch{
+    border: 1px solid #fff;
+  }
+  
+  .btn {
+    width: 100px;
+    height: 34px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .navbar.sticky .btn{
+    background: #fff;
+    border: 2px solid #fff;
+    color: #ff7200;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
+  .navbar .srch:focus {
+    outline: none;
+  }
 
 /*blabla section start*/
 
@@ -81,17 +137,7 @@ display: inline-block;
     margin: auto 0 auto 40px;
 }
 
-.home .home-content .text-1{
-    font-size: 100px;
-    color: black;
-}
-
-.home .home-content .text-2{
-    font-size: 100px;
-    color: black;
-}
-
-.home .home-content .text-3{
-    font-size: 100px;
+.home .home-content .text-1, .text-2{
+    font-size: 70px;
     color: black;
 }
