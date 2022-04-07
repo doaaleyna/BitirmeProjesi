@@ -17,6 +17,7 @@
   .navbar{
     position: fixed;
     width: 100%;
+    z-index: 999;
     padding: 15px 0;
     font-family: 'Ubuntu', sans-serif;
     background: transparent;
@@ -265,10 +266,53 @@ section{
 }
 
   /*responsive media query start*/
-  @media (max-width: 1102px){
-    .max-width{
-      padding: 0 50px;
+  @media (max-width: 1208px){
+    .menu-btn{
+      display: block;
+      z-index: 999;
     }
+    .menu-btn i.active:before{
+      content: "\f00d";
+    }
+    .navbar .menu{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+      left: 0;
+    }
+    .navbar .menu li{
+      display: block;
+    }
+    .navbar .menu li a{
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width: 1104px){
+    .about .about-content .left img{
+       height: 350px;
+       width: 350px;
+    }
+  }
+
+  @media (max-width: 991px){
+    .max-width{
+     padding: 0 50px;
+ }
+ }
+
+  @media (max-width: 947px){
+    
     .menu-btn{
       display: block;
       z-index: 999;
@@ -303,5 +347,49 @@ section{
     }
     .navbar .srch{
       display: none;
+    }
+    .boxes .box-content .text-1{
+      font-size: 70px;
+    } 
+    .boxes .box-content .text-2{
+      font-size: 35px;
+    }
+    .max-width{
+      max-width: 930px;
+    }
+    .about .about-content .column{
+      width: 100%;
+    }
+    .about .about-content .left{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+      flex: 100%;
+    }
+  }
+
+  @media (max-width: 690px){
+    .max-width{
+      padding: 0 23px;
+    }
+    .boxes .box-content .text-1{
+      font-size: 60px;
+    } 
+    .boxes .box-content .text-2{
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 500px){
+    .boxes .box-content .text-1{
+      font-size: 50px;
+    } 
+    .boxes .box-content .text-2{
+      font-size: 27px;
+    }
+    .about .about-content .right .text{
+      font-size: 19px;
     }
   }
