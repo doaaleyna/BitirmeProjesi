@@ -174,11 +174,9 @@
 }
 
 .boxes .box-content .text-1{
-    font-size: 50px;
-}
-
-.boxes .box-content .text-2{
-    font-size: 50px;
+  font-size: 70px;
+  font-weight: 600;
+  margin-left: -3px;
 }
 
 
