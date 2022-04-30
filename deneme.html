@@ -10,7 +10,6 @@
          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
          crossorigin="anonymous">
      <link rel="stylesheet" href="signinsignup.css">
-
      <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">goCampus</a></div>
@@ -32,17 +31,16 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <form action="#" class="sign-in-form">
-                    <h2 class="title">Giriş</h2>
+                    <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Kullanıcı Adı"/>
+                        <input type="text" placeholder="Username"/>
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-lock" onclick="show()"></i>
-                        <input id="pswrd" type="password" placeholder="Şifre"/>
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password"/>
                     </div>
-                    <input type="submit" class="btn solid" value="Giriş"/>
-                    <a href="#">Şifremi Unuttum</a>
+                    <input type="submit" class="btn solid" value="Login"/>
                     <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -59,22 +57,24 @@
                         </a>
                     </div>
                 </form>
+            </div>
+            
+            <div class="signup-signup">
                 <form action="#" class="sign-up-form">
-                    <h2 class="title">Kayıt</h2>
+                    <h2 class="title">Sign Up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Kullanıcı Adı"/>
+                        <input type="text" placeholder="Username"/>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Email"/>
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-lock" onclick="show()"></i>
-                        <input id="pswrd" type="password" placeholder="Şifre"/>
+                        <i class="fas fa-lock"></i>
+                        <input type="text" placeholder="Password"/>
                     </div>
-                    <input type="submit" class="btn solid" value="Kayıt Ol"/>
-                    <a href="#">Şifremi Unuttum</a>
+                    <input type="submit" class="btn solid" value="Login"/>
                     <p class="social-text">Or Sign Up with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -91,7 +91,8 @@
                         </a>
                     </div>
                 </form>
-            </div>           
+            </div>
+            
         </div>
         <div class="panels-container">
             <div class="panel left-panel">
@@ -100,26 +101,20 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Accusantium hic,
                     architecto laudantium voluptatibus eius eaque voluptatem ab sint.
                     </p>
-                    <button class="btn transparent" id="sign-up-button">Kayıt Ol</button>
+                    <button class="btn transparent" id="sign-up-button">Sign Up</button>
                 </div>
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>One of us</h3>
+                    <h3>One of use</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Accusantium hic,
                     architecto laudantium voluptatibus eius eaque voluptatem ab sint.
                     </p>
-                    <button class="btn transparent" id="sign-in-button">Giriş</button>
+                    <button class="btn transparent" id="sign-in-button">Sign In</button>
                 </div>
             </div>
         </div>
-    </div> 
-
-    <footer>
-        <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
-     </footer>
- 
+    </div>
      <script src="siginsignup.js"></script>
-
   </body>
 </html>
