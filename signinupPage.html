@@ -10,6 +10,8 @@
          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
          crossorigin="anonymous">
      <link rel="stylesheet" href="signinsignup.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
      <nav class="navbar">
         <div class="max-width">
@@ -27,7 +29,7 @@
   </head>
 
   <body>
-
+      
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
@@ -35,13 +37,19 @@
                     <h2 class="title">Giriş</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Kullanıcı Adı"/>
+                        <input type="text" placeholder="Username" id="userInp"/>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock" onclick="show()"></i>
-                        <input id="pswrd" type="password" placeholder="Şifre"/>
+                        <input type="password" placeholder="Password" id="passInp"/>
                     </div>
-                    <input type="submit" class="btn solid" value="Giriş"/>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Keep me Logged in</label>
+                    </div>
+                    <button type="text" id="log_btn" class="btn solid">Giriş</button>
+                   <!-- <input type="submit" class="btn solid" value="Giriş"/>
+                    -->
                     <a href="#">Şifremi Unuttum</a>
                     <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
@@ -59,21 +67,23 @@
                         </a>
                     </div>
                 </form>
+         
                 <form action="#" class="sign-up-form">
                     <h2 class="title">Kayıt</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Kullanıcı Adı"/>
+                        <input type="text" placeholder="Username"  id="userInp" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email"/>
+                        <input type="text" placeholder="Email" id="emailInp" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock" onclick="show()"></i>
-                        <input id="pswrd" type="password" placeholder="Şifre"/>
+                        <input type="password" placeholder="Password" id="passInp"/>
                     </div>
-                    <input type="submit" class="btn solid" value="Kayıt Ol"/>
+                    <button type="text" id="sub_btn" class="btn solid" >Kayıt Ol</button>
+                  
                     <a href="#">Şifremi Unuttum</a>
                     <p class="social-text">Or Sign Up with social platforms</p>
                     <div class="social-media">
@@ -96,7 +106,7 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>New Here?</h3>
+                    <h3>Hesabınız Yok Mu?</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Accusantium hic,
                     architecto laudantium voluptatibus eius eaque voluptatem ab sint.
                     </p>
@@ -105,10 +115,8 @@
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>One of us</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Accusantium hic,
-                    architecto laudantium voluptatibus eius eaque voluptatem ab sint.
-                    </p>
+                    <h3>Zaten bir hesabınız var mı?</h3>
+                    <p></p>
                     <button class="btn transparent" id="sign-in-button">Giriş</button>
                 </div>
             </div>
@@ -118,8 +126,146 @@
     <footer>
         <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
      </footer>
- 
-     <script src="siginsignup.js"></script>
 
+     <script src="siginsignup.js"></script>
+     <script type="module">
+
+                       //   FİREBASE CONFİG //
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+ 
+      const firebaseConfig = {
+         apiKey: "AIzaSyD1Sfk_PKQa7Mw7r1UDjU4CPfDsG_tp4og",
+         authDomain: "my-first-project-d0758.firebaseapp.com",
+         databaseURL: "https://my-first-project-d0758-default-rtdb.firebaseio.com",
+         projectId: "my-first-project-d0758",
+         storageBucket: "my-first-project-d0758.appspot.com",
+         messagingSenderId: "463295875319",
+         appId: "1:463295875319:web:b0de8c29326d725e936bf2"
+      };
+
+      const app = initializeApp(firebaseConfig);
+
+      import { getDatabase, ref, set, child, get}
+         from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js"
+
+      const db = getDatabase();  
+
+      //------------THE REFRENECES------------//
+
+      const username = document.getElementById('userInp');
+      const email = document.getElementById('emailInp');
+      const pass = document.getElementById('passInp');
+      const submit = document.getElementById('sub_btn')
+      const loginn=document.getElementById('log_btn')
+
+      //-------------Validation-------------//
+
+      function isEmptyOrSpaces(str){
+          return str === null || str.match(/^ *$/) !== null;
+      }
+
+      function Validation(){
+         let userregex = /^[a-zA-Z0-9]{5,}$/;
+         let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook|hotmail)\.com$/;
+         
+         if(isEmptyOrSpaces(email.value) || isEmptyOrSpaces(username.value) || isEmptyOrSpaces(pass.value)){
+             alert("You cannot left any field empty");
+             return false;
+         }
+        
+         if(!userregex.test(username.value)){
+             alert("-username can only be alphanumeric\n-username must be aleast 5 characters\n-username cannot contain spaces");
+             return false;
+         }
+
+         if(!emailregex.test(email.value)){
+             alert("enter a valid email");
+             return false;
+         }
+         return true;
+      }
+
+      //----------Register User To Firebase--------//
+      
+      function RegisterUser(){
+          if(!Validation()){
+              return;
+          };
+          const dbRef = ref(db);
+          get(child(dbRef, "UsersList/"+ username.value)).then((snapshot)=>{
+              if(snapshot.exists()){
+                  alert("Account Already Exits!");
+              } 
+              else{
+                  set(ref(db, "UsersList/"+ username.value),
+                  {
+                     username: username.value,
+                     email: email.value,
+                     password: encPass()
+                  })
+                  .then(()=>{
+                      alert("User added successfully");
+                  })
+                  .catch((error)=>{
+                      alert("error"+ error);
+                  })
+              }
+          });
+      }
+
+      //----------ENCRİPTİON------------//
+
+      function encPass(){
+          var pass12 = CryptoJS.AES.encrypt(pass.value,pass.value);
+          return pass12.toString();
+      }
+
+      //----------AUTHENTICATION PROCESS------//
+
+      function AuthenticateUser(){
+          const dbRef = ref(db)
+          get(child(dbRef, "UsersList/"+ username.value)).then((snapshot)=>{
+              if(snapshot.exists()){
+                  let dbpass = decPass(snapshot.val().password);
+                  if(dbpass == pass.value){
+                      login(snapshot.val());
+                  }
+                  else{
+                      alert("User does not exist");
+                  }
+              } 
+              else{
+                  alert("Username or password in valid")
+              }
+          });
+      }
+
+      //-------Decript Process-------//
+
+      function decPass(dbpass){
+          var pass12 = CryptoJS.AES.decrypt(dbpass,pass.value);
+          return pass12.toString(CryptoJS.enc.Utf8);
+      }
+
+      //-------Login---------//
+      function login(user){
+          
+          let keepLoggedIn = document.getElementById('customSwitch1').checked;
+          if(!keepLoggedIn){
+              sessionStorage.setItem('user',JSON.stringify(user));
+              window.location="homepage.html";
+          } 
+          else{
+              sessionStorage.setItem('keepLoggedIn','yes');
+              sessionStorage.setItem('user',JSON.stringify(user));
+              window.location="homepage.html";
+          }
+      }
+      //-----------Assign The Events-------//
+
+      submit.addEventListener('click',RegisterUser);
+      loginn.addEventListener('click',AuthenticateUser);
+
+   </script>
   </body>
 </html>

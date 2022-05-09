@@ -12,7 +12,7 @@ sign_in_btn.addEventListener('click',()=>{
 });
 
 function show(){
-    var pswrd=document.getElementById('pswrd');
+    var pswrd=document.getElementById('passInp');
     var icon=document.querySelector('.fas');
     if(pswrd.type === "password"){
         pswrd.type = "text";
