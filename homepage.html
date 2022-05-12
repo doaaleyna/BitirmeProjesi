@@ -40,18 +40,18 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active mx-1">
+                    <li class="nav-item mx-1">
                       <a id="userlink" class="nav-link"  href="">Username</a>
                     </li>
 
-                    <li class="nav-item active mx-1">
+                    <li class="nav-item mx-1">
                         <a id="signoutlink" class="nav-link"  href="">Sign Out</a>
                     </li>
                 </ul>
             </form>
           </div>
       </nav>
-
+      <h3 id="hh"></h3>
 
     <script>
 
@@ -79,7 +79,7 @@
         sessionStorage.removeItem('user');
         localStorage.removeItem('user');
         localStorage.removeItem('keepLogedIn');
-        window.location = "homepage.html"
+        window.location = "signinupPage.html"
       }
 
       //----------Windows Loads-----------//

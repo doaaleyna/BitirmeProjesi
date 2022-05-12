@@ -23,3 +23,16 @@ function show(){
         icon.style.color="grey";
     }
 }
+
+function show2(){
+    var pswrd=document.getElementById('passInp1');
+    var icon=document.querySelector('.fas');
+    if(pswrd.type === "password"){
+        pswrd.type = "text";
+        pswrd.style.marginTop = "20px";
+        icon.style.color="#ff7200";
+    }else{
+        pswrd.type="password";
+        icon.style.color="grey";
+    }
+}

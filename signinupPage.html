@@ -37,19 +37,17 @@
                     <h2 class="title">Giriş</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" id="userInp"/>
+                        <input type="text" placeholder="Username" id="userInp1"/>
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-lock" onclick="show()"></i>
-                        <input type="password" placeholder="Password" id="passInp"/>
+                        <i class="fas fa-lock" onclick="show2()"></i>
+                        <input type="password" placeholder="Password" id="passInp1"/>
                     </div>
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="customSwitch1">
                         <label class="custom-control-label" for="customSwitch1">Keep me Logged in</label>
                     </div>
                     <button type="text" id="log_btn" class="btn solid">Giriş</button>
-                   <!-- <input type="submit" class="btn solid" value="Giriş"/>
-                    -->
                     <a href="#">Şifremi Unuttum</a>
                     <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
@@ -155,6 +153,7 @@
       const username = document.getElementById('userInp');
       const email = document.getElementById('emailInp');
       const pass = document.getElementById('passInp');
+      const pass2=document.getElementById('passInp1');
       const submit = document.getElementById('sub_btn')
       const loginn=document.getElementById('log_btn')
 
@@ -226,8 +225,10 @@
           const dbRef = ref(db)
           get(child(dbRef, "UsersList/"+ username.value)).then((snapshot)=>{
               if(snapshot.exists()){
-                  let dbpass = decPass(snapshot.val().password);
-                  if(dbpass == pass.value){
+                  console.log(pass.value);
+                  let test=document.getElementById('userInp1').value;
+                  console.log(snapshot.val()[test].password);
+                  if(test == pass2.value){
                       login(snapshot.val());
                   }
                   else{
@@ -242,8 +243,8 @@
 
       //-------Decript Process-------//
 
-      function decPass(dbpass){
-          var pass12 = CryptoJS.AES.decrypt(dbpass,pass.value);
+      function decPass(test){
+          let pass12 = CryptoJS.AES.decrypt(test,pass2.value);
           return pass12.toString(CryptoJS.enc.Utf8);
       }
 
