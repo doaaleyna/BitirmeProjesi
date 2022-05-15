@@ -27,7 +27,6 @@
   .navbar.sticky{
     padding: 10px 0;
     background: #ff7200;
-    /*background-image: linear-gradient(#ff7200, #fff);*/
   }
   
   .navbar .max-width{
@@ -125,7 +124,7 @@
   }
   
   .navbar .butonlar {
-    width: 250px;
+    width: 205px;
     float: right;
   }
   
@@ -147,6 +146,7 @@
     color: #ff7200;
   }
 
+ 
   /*menu btn styling*/
   .menu-btn{
     color: #fff;
@@ -390,4 +390,27 @@ section{
     .about .about-content .right .text{
       font-size: 19px;
     }
+  }
+
+  .footer{
+    font-family: 'Poppins',sans-serif;
+  }
+
+  footer{
+    background: #111;
+    padding: 20px 23px;
+    color:#fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer span a{
+     color:#ff7200;
+     text-decoration: none;
+  }
+
+  footer span a:hover{
+    text-decoration: underline;
   }
