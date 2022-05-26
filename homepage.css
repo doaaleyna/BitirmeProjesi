@@ -321,8 +321,6 @@ a{
 }
 */
 
-
-
 /* banner section */
 .banner-section{
   background-image: url('../img/banner.jpg');
@@ -339,7 +337,6 @@ a{
 
 /*responsive*/
 @media(max-width: 991px){
-
 	.header .item-center{
 		order:3;
 		flex:0 0 100%;
@@ -488,29 +485,29 @@ a{
 		transform: translateX(0%);
 		overflow-y: auto;
 	}
-.header .menu > ul > li .sub-menu.active{
+	.header .menu > ul > li .sub-menu.active{
 	display: block;
-}
-@keyframes slideLeft{
-	0%{
-		opacity:0;
-		transform: translateX(100%);
 	}
-	100%{
-	    opacity:1;
-		transform: translateX(0%);	
+	@keyframes slideLeft{
+		0%{
+			opacity:0;
+			transform: translateX(100%);
+		}
+		100%{
+	    	opacity:1;
+			transform: translateX(0%);	
+		}
 	}
-}
-@keyframes slideRight{
-	0%{
-		opacity:1;
-		transform: translateX(0%);
+	@keyframes slideRight{
+		0%{
+			opacity:1;
+			transform: translateX(0%);
+		}
+		100%{
+	    	opacity:0;
+			transform: translateX(100%);	
+		}
 	}
-	100%{
-	    opacity:0;
-		transform: translateX(100%);	
-	}
-}
 	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img{
 		margin-top:0;
 	}
@@ -549,12 +546,11 @@ a{
 	}
 }
 
-
 /* Section started */
-
 section{
   padding: 40px 0;
 }
+
 .about{
   font-family: 'Poppins',sans-serif;
 }
@@ -634,9 +630,8 @@ section{
   background: none;
 }
 
-
- /* footer section styling*/
- .footer{
+/* footer section styling*/
+.footer{
   font-family: 'Poppins',sans-serif;
 }
 
@@ -658,11 +653,3 @@ footer span a{
 footer span a:hover{
   text-decoration: underline;
 }
-
-
-
-
-
-
-
-

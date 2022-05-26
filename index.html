@@ -11,13 +11,12 @@
 </head>
 
 <body>
-
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">goCampus</a></div>
+            <div class="logo"><a href="index.html">goCampus</a></div>
             <ul class="menu">
                 <li><a href="about.html">Hakkımızda</a></li>
-                <li><a href="howitworks.html">Nasıl Çalışır</a></li>
+                <li><a href="howitworks.html">goCampus'de Eğitim Verin</a></li>
                 <li><a href="contact.html">Bize Ulaşın</a></li>
             </ul>
             <div class="search">
@@ -34,59 +33,22 @@
         </div>
     </nav>
 
-    <script src="script.js"></script>
-    
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <h1>Yeni Nesil <br><span>Eğitim</span> <br>Platformu</h1>
-                <p>Kampüs bir tık uzağında...</p>
-                <button class="cn"><a href="#">Bize Ulaşın</a></button>
-                <div class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos asperiores quia ratione consequatur aliquid ea cum, veritatis ipsum corporis a expedita voluptates minus quibusdam sed. Obcaecati optio nisi deleniti.</div>
-                <div class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos asperiores quia ratione consequatur aliquid ea cum, veritatis ipsum corporis a expedita voluptates minus quibusdam sed. Obcaecati optio nisi deleniti.</div>           
-            </div>
-
-            <div class="form-box">
-                <div class="button-box">
-                    <div id="bton"></div>
-                    <button type="button" onclick="login()" class="toggle-bton">Giriş Yap</button>
-                    <button type="button" onclick="register()" class="toggle-bton">Kayıt Ol</button>
-                </div>
-                <form id="login" class="input-group-login">
-                    <input type="text" class="input-field" placeholder="E-mail" required>
-                    <input type="password" class="input-field" placeholder="Şifre" required>
-                    <input type="checkbox" class="check-box"><span>Şifremi Hatırla</span>
-                    <a href="#" id="forgot" class="forgot">Şifremi Unuttum</a>
-                    <button type="submit" class="submit-bton">Giriş Yap</button>
-                </form>
-                <form id="register" class="input-group-register">
-                    <input type="text" class="input-field" placeholder="İsim Soyisim" required>
-                    <input type="email" class="input-field" placeholder="E-mail" required>
-                    <input type="telefon" class="input-field" placeholder="Telefon" required>
-                    <input type="password" class="input-field" placeholder="Şifre" required>
-                    <button type="submit" class="submit-bton">Kayıt Ol</button>
-                </form>
-            </div>
-    
-        <script>
-            var x=document.getElementById('login');
-            var y=document.getElementById('register');
-            var z=document.getElementById('bton');
-            function register()
-            {
-                x.style.left='-400px';
-                y.style.left='50px';
-                z.style.left='110px';
-            }
-            function login()
-            {
-                x.style.left='50px';
-                y.style.left='450px';
-                z.style.left='0px';
-            }
-        </script>
+<!-- section start-->
+<section class="home" id="home">
+    <div class="max-width">
+        <div class="home-content">
+            <h1>Yeni Nesil <br><span>Eğitim</span> <br>Platformu</h1>
+            <p>Kampüs bir tık uzağında...</p>
+            <button class="cn"><a href="contact.html">Bize Ulaşın</a></button>
         </div>
-    </section>   
+    </div>
+</section>
 </div>
+
+<!-- footer section start-->
+<footer>
+    <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
