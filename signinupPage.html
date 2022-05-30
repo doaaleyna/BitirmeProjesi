@@ -151,6 +151,7 @@
       //------------THE REFRENECES------------//
 
       const username = document.getElementById('userInp');
+      const username2 =document.getElementById('userInp1')
       const email = document.getElementById('emailInp');
       const pass = document.getElementById('passInp');
       const pass2=document.getElementById('passInp1');
@@ -228,10 +229,12 @@
                   console.log(pass.value);
                   let test=document.getElementById('userInp1').value;
                   console.log(snapshot.val()[test].password);
-                  if(test == pass2.value){
+                  let passdeneme=decPass(snapshot.val()[test].password);
+                  if(passdeneme == pass2.value){
                       login(snapshot.val());
                   }
                   else{
+                      console.log(pass2.value);
                       alert("User does not exist");
                   }
               } 

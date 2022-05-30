@@ -321,6 +321,74 @@ a{
 }
 */
 
+
+
+.header .header-item >ul{
+	display: flex;
+	align-items: center;
+}
+
+.header .header-item ul li.header-li{
+	margin-left: 25px;
+	cursor: pointer;
+	color: #ff7200;
+	font-size: 15px;
+	position: relative;
+}
+
+.header .header-item ul li.header-li:hover{
+	color: #cefffc;
+}
+
+.header .header-item ul li img{
+	width: 35px;
+	vertical-align: middle;
+}
+
+.header .dd_menu{
+	position: absolute;
+	top: 47px;
+	right: -25px;
+	display: flex;
+	background: #fff;
+	box-shadow: 0 0 3px rgb(0,0,0,0.25);
+	border-radius: 15px;
+	display: none;
+}
+
+.header .dd_menu .dd_left{
+	background: #ff7200;
+	padding: 15px 20px;
+	border-bottom-left-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+.header .dd_menu .dd_left li{
+	color: #fff;
+}
+
+.header .dd_menu .dd_right{
+	padding: 15px 20px;
+}
+
+.header .dd_menu li{
+	margin-bottom: 10px;
+	color: black;
+}
+
+.header .dd_menu::before{
+	content: '';
+	position:absolute;
+	top: -20px;
+	right: 30px;
+	border: 10px solid;
+	border-color: transparent transparent #fff transparent;
+}
+
+.header .header-item ul li.li_main.active .dd_menu{
+ 	display: flex;
+}
+
 /* banner section */
 .banner-section{
   background-image: url('../img/banner.jpg');
