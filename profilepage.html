@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoCampus.com</title>
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="profilepage.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -165,10 +165,10 @@
                 <div class="dd_right">
                   <ul>
                     <li>Öğrenim İçeriğim</li>
-                    <li>Mesajlar</li>
+                    <li>Favoriler</li>
+                    <li>Addpeople</li>
+                    <li>Hesap Ayarları</li>
                     <li>Profili Düzenle</li>
-                    <li>Ayarlar</li>
-                    <li>Yardım</li>
                     <li>Oturumu Kapat</li>
                   </ul>
                 </div>
@@ -214,75 +214,25 @@
   </div>
 </section>
 
-<section class="about" id="about"> 
-   <div class="max-width">
-       <div class="about-content">
-             <div class="column left">
-                 <img src="images/education3.jpeg" alt="">
+<section class="account" id="account"> 
+       <div class="profile-container">
+             <div class="profile-menu">
+                 <div class="image-container">
+                    <img src="" alt="">
+                 </div>
              </div>
-             <div class="column right">
-                 <div class="text">Hakkımızda</div>
-                 <p>Özellikle üniversite öğrencilerin yönelik sunduğumuz zengin ders içeriklerimizden
-                     ihtiyaca göre yararlanma imkanı sağlıyoruz. Canlı ders, ders içi katılım, değerlendirme
-                     sınavları ile sertifika imkanı sunmaktayız. Kaliteli ve yenilikçi hizmet anlayışı
-                     ile bireyleri daha yetkin kılmayı amaçlamaktayız.
-                 </p>
-                 <a href="#">Daha Fazla</a>    
-             </div>
+             <ul>
+                 <li class="active">Projects</li>
+                 <li>Developers</li>
+                 <li>Team</li>
+                 <li>Jobs</li>
+                 <li>Logout</li>
+             </ul>
        </div>
-   </div>
 </section>
 
-<footer>
-  <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
-</footer>
 
-<script src="ornek.js"></script>
-<script>
 
-//----------REFERENCES-----------//
-let userlink = document.getElementById('userlink');
-let signoutlink = document.getElementById('signoutlink');
-let header = document.getElementById('hh');
-var currentUser = null;
 
-//-----------Functions-----------//
-function getUserName() {
-  let keepLoggedIn = localStorage.getItem('keepLoggedIn');
-  
-  if (keepLoggedIn == 'yes') {
-    currentUser = JSON.parse(localStorage.getItem('user'));
-  }
-  else {
-    currentUser = JSON.parse(sessionStorage.getItem('user'));
-  }
-}
-
-function Signout() {
-  sessionStorage.removeItem('user');
-  localStorage.removeItem('user');
-  localStorage.removeItem('keepLogedIn');
-  window.location = "signinupPage.html"
-}
-
-//----------Windows Loads-----------//
-window.onload = function () {
-  getUserName();
-  if(currentUser) 
-  {
-    userlink.innerText = currentUser.username;
-    header.innerText = "Welcome" + currentUser.username;
-    userlink.classList.replace("btn", "nav-link");
-    userlink.classList.remove("btn-primary");
-    userlink.href = "#";
-    
-    signoutlink.innerText = "Sign Out";
-    signoutlink.classList.replace("btn", "nav-link");
-    signoutlink.classList.remove("btn-success");
-    signoutlink.href = "javascript:Signout()";
-  }
-}
-
-</script>
 </body>
 </html>

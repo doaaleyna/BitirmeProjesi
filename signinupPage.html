@@ -132,21 +132,22 @@
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
  
       const firebaseConfig = {
-         apiKey: "AIzaSyD1Sfk_PKQa7Mw7r1UDjU4CPfDsG_tp4og",
-         authDomain: "my-first-project-d0758.firebaseapp.com",
-         databaseURL: "https://my-first-project-d0758-default-rtdb.firebaseio.com",
-         projectId: "my-first-project-d0758",
-         storageBucket: "my-first-project-d0758.appspot.com",
-         messagingSenderId: "463295875319",
-         appId: "1:463295875319:web:b0de8c29326d725e936bf2"
-      };
-
+       apiKey: "AIzaSyBJ_2nx6-xf5_piS-a7rSQFWNojaMwlRUw",
+       authDomain: "virtualschoolfirebase.firebaseapp.com",
+       databaseURL: "https://virtualschoolfirebase-default-rtdb.firebaseio.com",
+       projectId: "virtualschoolfirebase",
+       storageBucket: "virtualschoolfirebase.appspot.com",
+       messagingSenderId: "564476107923",
+       appId: "1:564476107923:web:3ed27fe51d9ada05198166"
+     };
+      
       const app = initializeApp(firebaseConfig);
 
       import { getDatabase, ref, set, child, get}
          from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js"
 
       const db = getDatabase();  
+
 
       //------------THE REFRENECES------------//
 
@@ -271,5 +272,6 @@
       loginn.addEventListener('click',AuthenticateUser);
 
    </script>
+   
   </body>
 </html>
