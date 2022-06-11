@@ -125,24 +125,14 @@
                 </div>
               </li>
               <li class="menu-item-has-children">
-                <a href="lessons.html">Öğrenim İçeriğim <i class="fa fa-angle-down"></i></a>
+                <a href="#">Öğrenim İçeriğim <i class="fa fa-angle-down"></i></a>
                 <div class="sub-menu mega-menu mega-menu-column-1">
                   <div class="list-item">
                     <ul>
-                      <li><a href="#">Deneme1</a>
-                        <div class="katman">
-                          <div class="loadingders"></div>
-                        </div>
-                      <li><a href="#">Deneme2</a>
-                        <div class="katman">
-                          <div class="loadingders"></div>
-                        </div>
-                      <li><a href="#">Deneme3</a>
-                        <div class="katman">
-                          <div class="loadingders"></div>
-                        </div>
-                          <a href="lessons.html">Öğrenim İçeriğim'e Gidin</a>  
-                      </div>
+                      <li><a href="#">Veri İletişimi ve Ağ Güvenliği</a></li>
+                      <li><a href="#">Python Programlama</a></li>
+                      <li><a href="#">Nesneye Yönelik Programlama</a></li>
+                      <a href="lessons.html">Öğrenim İçeriğim'e Gidin</a>  
                     </ul>
                   </div>
                 </div>
@@ -152,37 +142,21 @@
         </div>
         <!-- menu end here -->
         <div class="header-item item-right">
-          <ul>
-            <li class="header-li li_main"><img src="images/user.png" alt="profile_image">
-              <div class="dd_menu">
-                <div class="dd_left">
-                  <ul>
-                    <li><i class="fas fa-map-marker-alt"></i></li>
-                    <li><i class="far fa-star"></i></li>
-                    <li><i class="far fa-plus-square"></i></li>
-                    <li><i class="fas fa-cog"></i></li>
-                    <li><i class="fas fa-download"></i></li>
-                    <li><i class="fas fa-sign-out-alt"></i></li>
-                  </ul>
-                </div>
-                <div class="dd_right">
-                  <ul>
-                    <li>Location</li>
-                    <li>Favoriler</li>
-                    <li>Addpeople</li>
-                    <li>Ayarlar</li>
-                    <li>Downloads</li>
-                    <li>Logout</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="header-li">
-              <i class="fas fa-envelope-open-text"></i>
-            </li>
-          </ul>
-       </div>
-
+          <a href="#"><i class="far fa-heart"></i></a>
+         <!-- <a href="#"><i class="fas fa-shopping-cart"></i></a> -->
+          <div class="butonlar">
+            <form class="form-inline my-2 my-lg-0">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item mx-1">
+                  <a id="userlink" class="nav-link" href=""><i class="fas fa-user"></i></a>
+                </li>
+                <li class="nav-item mx-1">
+                  <a id="signoutlink" class="nav-link" href="">Sign Out</a>
+                </li>
+              </ul>
+            </form>
+          </div>
+          </div>
            <!--mobile menu trigger -->
           <div class="mobile-menu-trigger">
             <span></span>
@@ -200,40 +174,29 @@
   }
 
 </script>
-<script>
-  var li_main=document.querySelector(".li_main");
-
-  li_main.addEventListener("click",function(){
-     this.classList.toggle("active");
-  })
-</script>
 <script src="script.js"></script>
-
- <!-- section start-->
+<!--
+<div class="katman">
+    <div class="loading"></div>
+</div>
+-->
+<!--bu kısma navbar gelecek-->
+<nav class="boxles">
+    <div class="max-width">
+        <ul class="menu">
+            <li><a href="lessons.html">Tüm Dersler</a></li>
+            <li><a href="#">Derslerim</a></li>
+            <li><a href="#">İstek Listesi</a></li>
+            <li><a href="#">Arşivlenenler</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- section start-->
 <section class="boxes" id="boxes">
   <div class="max-width">
       <div class="box-content">
           <div class="text-1"></div>
   </div>
-</section>
-
-<section class="about" id="about"> 
-   <div class="max-width">
-       <div class="about-content">
-             <div class="column left">
-                 <img src="images/education3.jpeg" alt="">
-             </div>
-             <div class="column right">
-                 <div class="text">Hakkımızda</div>
-                 <p>Özellikle üniversite öğrencilerin yönelik sunduğumuz zengin ders içeriklerimizden
-                     ihtiyaca göre yararlanma imkanı sağlıyoruz. Canlı ders, ders içi katılım, değerlendirme
-                     sınavları ile sertifika imkanı sunmaktayız. Kaliteli ve yenilikçi hizmet anlayışı
-                     ile bireyleri daha yetkin kılmayı amaçlamaktayız.
-                 </p>
-                 <a href="#">Daha Fazla</a>    
-             </div>
-       </div>
-   </div>
 </section>
 
 <footer>
