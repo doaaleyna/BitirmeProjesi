@@ -86,11 +86,6 @@
                       <li><a href="#">Sosyoloji</a></li>
                     </ul>
                     <h4 class="title">Öğretmen Eğitimi</h4>
-                    <ul>
-                      <li><a href="#">Product List</a></li>
-                      <li><a href="#">Product List</a></li>
-                      <li><a href="#">Product List</a></li>
-                    </ul>
                   </div>
                   <div class="list-item">
                     <h4 class="title">Dil Öğrenimi</h4>
@@ -109,19 +104,6 @@
                       <li><a href="#">KPSS</a></li>
                     </ul>
                   </div>
-                  <div class="list-item">
-                    <img src="img/shop1.jpg" alt="shop">
-                  </div>
-                </div>
-              </li>
-              <li class="menu-item-has-children">
-                <a href="#">Blog <i class="fas fa-angle-down"></i></a>
-                <div class="sub-menu single-column-menu">
-                  <ul>
-                    <li><a href="#">Standard Layout</a></li>
-                    <li><a href="#">Grid Layout</a></li>
-                    <li><a href="#">single Post Layout</a></li>
-                  </ul>
                 </div>
               </li>
               <li class="menu-item-has-children">
@@ -141,22 +123,35 @@
           </nav>
         </div>
         <!-- menu end here -->
-        <div class="header-item item-right">
-          <a href="#"><i class="far fa-heart"></i></a>
-         <!-- <a href="#"><i class="fas fa-shopping-cart"></i></a> -->
-          <div class="butonlar">
-            <form class="form-inline my-2 my-lg-0">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item mx-1">
-                  <a id="userlink" class="nav-link" href=""><i class="fas fa-user"></i></a>
-                </li>
-                <li class="nav-item mx-1">
-                  <a id="signoutlink" class="nav-link" href="">Sign Out</a>
-                </li>
-              </ul>
-            </form>
-          </div>
-          </div>
+          <div class="header-item item-right">
+            <ul>
+              <li class="header-li li_main"><img src="images/user.png" alt="profile_image">
+                <div class="dd_menu">
+                  <div class="dd_left">
+                    <ul>
+                      <li><i class="fas fa-map-marker-alt"></i></li>
+                      <li><i class="far fa-star"></i></li>
+                      <li><i class="far fa-plus-square"></i></li>
+                      <li><i class="fas fa-cog"></i></li>
+                      <li><i class="fas fa-download"></i></li>
+                      <li><i class="fas fa-sign-out-alt"></i></li>
+                    </ul>
+                  </div>
+                  <div class="dd_right">
+                    <ul>
+                      <li><a href="#">Öğrenim İçeriğim</a></li>
+                      <li><a href="#">Mesajlar</a></li>
+                      <li><a href="#">Profili Düzenle</a></li>
+                      <li><a href="#">Ayarlar</a></li>
+                      <li><a href="#">Yardım</a></li>
+                      <li><a href="#">Oturumu Kapat</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+         </div>
+  
            <!--mobile menu trigger -->
           <div class="mobile-menu-trigger">
             <span></span>
@@ -173,6 +168,13 @@
     search.classList.toggle('active');
   }
 
+</script>
+<script>
+  var li_main=document.querySelector(".li_main");
+
+  li_main.addEventListener("click",function(){
+     this.classList.toggle("active");
+  })
 </script>
 <script src="script.js"></script>
 <!--

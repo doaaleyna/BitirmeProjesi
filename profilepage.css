@@ -639,26 +639,66 @@ a{
     background-color: black;
 }
 
-/* Section started */
-section{
-  padding: 40px 0;
+
+/* Cerceve yapısı için*/
+
+.main{
+	padding: 15px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.account{
-  font-family: 'Poppins',sans-serif;
+.main .topbar{
+	background-color: teal;
+	overflow: hidden;
 }
 
-.account .profile-container{
-  width: 485px;
-  height: 485px;
-  margin: 0 auto;
-  margin-top: 200px;
+.main .topbar a{
+	float: right;
+	color: black;
+	text-align: center;
+	padding: 20px 26px;
+	text-decoration: none;
+	font-size: 26px;
 }
-.account .profile-container .profile-menu{
-	  float: left;
-	  width: 37%;
-	  height: 482px;
+
+.sidebar{
+	background-color: #333;
+	color: black;
+	height: 100%;
 }
+
+.sidebar a{
+	margin-left: 10px;
+	display: block;
+	color: black;
+	padding-bottom: 10px;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.card{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.content{
+	background-color: black;
+}
+.main .btn {
+	width: 150px;
+	background-color: #ff7200;
+	border: none;
+	outline: none;
+	height: 49px;
+	border-radius: 49px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 10px 0;
+	cursor: pointer;
+	transition: 0.5s;
+  }
 
 
 

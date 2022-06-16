@@ -474,6 +474,138 @@ section{
   }
 }
 
+
+.boxes{
+  display: flex;
+  background: url("https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg") no-repeat center;
+  height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+  min-height: 650px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.boxes .max-width{
+  margin: auto 0 auto 40px;
+}
+
+.boxes .box-content .text-1{
+font-size: 50px;
+font-weight: 600;
+margin-left: -3px;
+}
+
+.boxes .box-content .text-2{
+font-size: 50px;
+font-weight: 600;
+margin-left: -3px;
+}
+
+.boxes .box-content .text-3{
+font-size: 20px;
+font-weight: 350;
+margin-left: -3px;
+}
+
+.boxes .box-content .text-4{
+font-size: 20px;
+font-weight: 350;
+margin-left: -3px;
+}
+
+.boxes .button{
+margin: 14px 0;
+}
+
+.boxes .button button{
+outline: none;
+color:#fff;
+font-size: 20px;
+font-weight: 500;
+padding: 9px 125px;
+background: #1c1d1f;
+border: 2px solid transparent;
+transition: all 0.4 ease;
+}
+
+.boxes .button button:hover{
+color: #fff;
+background-color: black;
+border-color: #1c1d1f ;
+}
+
+
+/* about section styling*/
+
+.about{
+font-family: 'Poppins','sans-serif';
+}
+
+.about .title{
+position: relative;
+text-align: center;
+font-size: 50px;
+font-weight: 500;
+margin-bottom: 100px;
+padding-bottom: 10px;
+font-family: 'Ubuntu','sans-serif';
+}
+
+.about .title::before{
+content: "";
+position: absolute;
+bottom: 0px;
+left: 50%;
+width: 180px;
+height: 3px;
+background: #111;
+transform: translateX(-50%);
+}
+
+.about .title::after{
+background: #111;
+position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.about .about-content{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+}
+
+.about .about-content .card{
+width: calc(33% - 20px);
+text-align: center;
+border-radius: 6px;
+padding: 20px 25px;
+cursor: pointer;
+}
+
+.about .about-content .card .box{
+transition: all 0.3s ease;
+}
+
+.about .about-content .card i{
+font-size: 50px;
+color: #ff7200;
+}
+
+.about .about-content .card .text{
+font-size: 25px;
+font-weight: 500;
+margin: 10px 0 7px 0;
+}
+
+
 .footer{
   font-family: 'Poppins',sans-serif;
 }
